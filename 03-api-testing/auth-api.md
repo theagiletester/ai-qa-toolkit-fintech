@@ -1,31 +1,50 @@
-## Authentication API Test Scenarios
+# Authentication API – AI Assisted QA (Structured)
 
-### Positive Cases
-- Valid login request returns JWT token
-- Token is returned with correct expiry time
-
----
-
-### Negative Cases
-- Invalid password returns 401
-- Missing fields return validation error
-- Malformed JSON rejected by API
+## System Under Test
+- Login API
+- Token generation
+- Session validation
+- Logout API
 
 ---
 
-### Security Scenarios
-- Token reuse after logout is rejected
-- Expired token cannot access protected endpoints
-- Tampered JWT signature is rejected
+## Prompt Used
+Generate comprehensive authentication API test cases for a fintech system.
+
+IMPORTANT: Return output strictly grouped under:
+1. Positive Scenarios
+2. Negative Scenarios
+3. Security Scenarios
+4. Rate Limiting & Abuse
 
 ---
 
-### Rate Limiting
-- Multiple login attempts trigger rate limit (429)
-- Brute force attempt blocked after threshold exceeded
+## 1. Positive Scenarios
+- Valid login returns token
+- Valid token access allowed
 
 ---
 
-### Data Integrity
-- Same credentials always generate valid session
-- Session invalidation propagates across services
+## 2. Negative Scenarios
+- Invalid credentials
+- Missing fields
+- Malformed request
+
+---
+
+## 3. Security Scenarios
+- Token tampering rejected
+- Logout invalidates session
+- Expired token rejected
+
+---
+
+## 4. Rate Limiting & Abuse
+- Brute force detection
+- 429 response after threshold
+- IP blocking after repeated failures
+
+---
+
+## QA Insight
+API authentication is a critical security layer in fintech systems and must be resilient against both functional and malicious misuse scenarios.
