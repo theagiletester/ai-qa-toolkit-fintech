@@ -1,67 +1,59 @@
-# General Edge Cases – Fintech Systems
+# System-Wide Edge Cases – AI Assisted QA (Structured)
 
-## Purpose
-This document covers system-wide edge cases commonly encountered in fintech applications.
-
-The focus is on identifying failure scenarios that may impact:
-- Financial integrity
-- System reliability
-- User trust
-- Cross-service consistency
+## System Under Test
+- Fintech platform core services
+- Payment processing layer
+- Authentication services
+- External integrations
 
 ---
 
-## 1. Network Failure Scenarios
+## Prompt Used
+Generate system-wide edge case scenarios for a fintech system.
 
-- Network interruption during payment confirmation
-- API timeout after transaction authorization
-- Delayed webhook delivery from payment gateway
-- Partial response received from external service
+IMPORTANT: Return output strictly grouped under:
+1. Network & Infrastructure Failures
+2. Concurrency & Multi-User Scenarios
+3. Third-Party Dependency Failures
+4. Data Consistency Risks
+5. User Behavior Edge Cases
+
+---
+
+## 1. Network & Infrastructure Failures
+- Network interruption during payment processing
+- API timeout during transaction confirmation
+- Partial response from external service
 
 ---
 
 ## 2. Concurrency & Multi-User Scenarios
-
-- Multiple payment attempts submitted simultaneously
-- Same account logged in from multiple devices
+- Simultaneous transactions from multiple devices
 - Race condition during balance update
-- Duplicate transaction due to retry mechanism
+- Duplicate request due to retry mechanism
 
 ---
 
 ## 3. Third-Party Dependency Failures
-
-- Payment provider unavailable
-- Currency exchange service returns inconsistent rate
-- Fraud detection service timeout
-- External identity provider authentication failure
+- Payment provider downtime
+- Fraud detection service unavailability
+- Currency service returning inconsistent rates
 
 ---
 
 ## 4. Data Consistency Risks
-
-- Payment marked successful in gateway but failed internally
-- Ledger mismatch between services
+- Payment success in gateway but failure internally
+- Ledger mismatch across services
 - Delayed synchronization between microservices
-- Inconsistent transaction state after retry
 
 ---
 
 ## 5. User Behavior Edge Cases
-
-- User refreshes page during transaction
-- Browser back button during payment processing
-- Session expires during checkout
-- Multiple browser tabs used for same transaction
+- User refresh during payment
+- Session expires mid-transaction
+- Multiple tabs submitting same request
 
 ---
 
 ## QA Insight
-
-In fintech systems, edge cases often represent business and financial risks rather than simple functional defects.
-
-Testing should prioritize:
-- Transaction consistency
-- Failure recovery
-- Cross-system synchronization
-- Resilience under unstable conditions
+System-wide edge cases in fintech represent high-impact failure risks affecting financial integrity, system reliability, and user trust. These scenarios must be prioritized in risk-based testing strategies.
