@@ -29,9 +29,10 @@ The framework is applied to a typical fintech platform including:
 
 ### 01-authentication
 AI-assisted authentication test design including:
-- MFA flows
+- Multi-Factor Authentication (MFA)
 - Session management
-- Account security and abuse scenarios
+- Account lockout mechanisms
+- Security and abuse scenarios (credential stuffing, brute force, token abuse)
 
 ### 02-payments
 AI-assisted payment test design including:
