@@ -1,29 +1,51 @@
-## Transaction Consistency Risks
+# Fintech Payment System – AI Assisted QA (Structured)
 
-- Payment succeeds at bank but fails in application layer
-- Duplicate charge due to retry after timeout
-- Partial capture failure in multi-step payment flow
-
----
-
-## Gateway & Third Party Failures
-
-- Payment gateway returns success but webhook fails
-- Gateway timeout after funds are reserved
-- Inconsistent status between PSP and internal ledger
+## System Under Test
+- Card payments
+- Bank transfers
+- FX conversion
+- Payment gateway integration
 
 ---
 
-## Currency & Financial Accuracy
+## Prompt Used
+Generate comprehensive payment test cases for a fintech system.
 
-- Currency conversion mismatch between systems
-- Rounding errors in multi-currency transactions
-- Incorrect FX rate applied during transaction processing
+IMPORTANT: Return output strictly grouped under the following sections:
+1. Transaction Processing
+2. Gateway & External Systems
+3. Currency & Financial Accuracy
+4. Retry & Concurrency Scenarios
 
 ---
 
-## Retry & Concurrency Issues
+## 1. Transaction Processing
+- Successful payment completion
+- Partial failure after authorization
+- Duplicate payment prevention
 
-- User clicks "Pay" multiple times
-- Network retry causes duplicate transaction
-- Race condition in payment confirmation callback
+---
+
+## 2. Gateway & External Systems
+- Gateway timeout after authorization
+- Webhook failure handling
+- Third-party downtime scenarios
+
+---
+
+## 3. Currency & Financial Accuracy
+- FX mismatch scenarios
+- Rounding errors in multi-currency payments
+- Incorrect exchange rate application
+
+---
+
+## 4. Retry & Concurrency Scenarios
+- Double submit payment
+- Race condition in payment confirmation
+- Retry causing duplicate charge
+
+---
+
+## QA Insight
+Payment systems require strict financial integrity validation, where even minor inconsistencies can lead to monetary loss and reconciliation issues.
