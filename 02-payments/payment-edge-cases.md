@@ -15,7 +15,7 @@ IMPORTANT: Return output strictly grouped under the following sections:
 1. Transaction Processing
 2. Gateway & External Systems
 3. Currency & Financial Accuracy
-4. Retry & Concurrency Scenarios
+4. Concurrency and duplicate payments
 
 ---
 
