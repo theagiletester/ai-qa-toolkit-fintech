@@ -1,38 +1,121 @@
+# AI-Assisted QA Toolkit – Fintech Edition
 
+## Overview
+
+This repository demonstrates a structured approach to AI-assisted QA design for fintech systems.
+
+The project focuses on how AI-generated test scenarios can support:
+- Broader test coverage
+- Risk-based testing
+- Edge case discovery
+- Structured QA thinking
+
+The goal is not to replace QA expertise, but to enhance test design and scenario exploration through AI-assisted prompting.
 
 ---
 
-## 🧠 Approach
+# Repository Structure
 
-This project uses AI as an assistant for:
+## 1. Authentication Testing
+Location:
+`01-authentication/login-mfa.md`
 
-- Expanding test scenarios beyond manual thinking
-- Generating edge cases and risk scenarios
-- Structuring QA thinking in a consistent format
-
-However, all QA decisions remain driven by human expertise and domain understanding.
+Focus areas:
+- MFA flows
+- Session management
+- Account lockout mechanisms
+- Security and abuse scenarios
 
 ---
 
-## ⚠️ Key Principle
+## 2. Payment Edge Cases
+Location:
+`02-payments/payment-edge-cases.md`
 
-In fintech QA, the focus is not only functional correctness, but also:
+Focus areas:
+- Transaction consistency risks
+- Duplicate payments
+- Gateway failures
+- Currency conversion issues
+- Concurrency scenarios
 
-- Financial risk prevention
+---
+
+## 3. API Testing
+Location:
+`03-api-testing/auth-api.md`
+
+Focus areas:
+- Authentication APIs
+- Token validation
+- Negative API scenarios
+- Security and rate limiting tests
+- Session consistency validation
+
+---
+
+## 4. System-Wide Edge Cases
+Location:
+`04-edge-cases/general-edge-cases.md`
+
+Focus areas:
+- Network failures
+- Third-party dependency issues
+- Data consistency risks
+- Concurrent user behavior
+- Failure recovery scenarios
+
+---
+
+## 5. Fintech QA Test Strategy
+Location:
+`05-test-strategy/fintech-test-strategy.md`
+
+Focus areas:
+- Risk-based testing
+- Functional and API testing
 - Security validation
-- Data integrity
-- System reliability under failure conditions
+- Failure condition testing
+- AI-assisted scenario generation
 
 ---
 
-## 🚀 Outcome
+# QA Approach
 
-This repository demonstrates a modern QA approach where:
+This project follows several core QA principles:
 
-> QA expertise + AI assistance = faster, broader, and more risk-aware testing
+- Risk-based testing
+- Security-focused validation
+- Failure-condition analysis
+- Structured scenario grouping
+- Financial integrity awareness
+
+Testing in fintech systems requires attention not only to functional correctness, but also to:
+- Transaction reliability
+- Fraud prevention
+- Data consistency
+- System resilience
 
 ---
 
-## 📌 Author Note
+# AI-Assisted QA Philosophy
 
-This project is part of an exploration into AI-assisted QA practices for real-world fintech systems.
+AI is used as a supporting tool for:
+- Expanding test ideas
+- Discovering additional edge cases
+- Structuring test coverage
+- Improving exploratory thinking
+
+Final validation and QA decisions remain dependent on human review, domain understanding, and business context.
+
+---
+
+# Conclusion
+
+This repository represents a practical exploration of AI-assisted QA techniques applied to fintech systems.
+
+It combines:
+- Structured QA thinking
+- Risk-focused scenario design
+- API and payment validation concepts
+- System-wide edge case analysis
